@@ -70,11 +70,18 @@ body {
   right: 5%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   border-radius: 15px;
-  /* font-size: 4em; */
+  font-size: 1.5em;
+  padding: 12px;
+}
+#timer-input{
+  outline: none;
+  font-size: 1.5em;
 }
 #timer-input {
   color: #000;
+  width: 70%;
+  height: 2em;
 }
