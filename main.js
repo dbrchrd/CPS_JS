@@ -14,7 +14,7 @@ var count = 0;
 
 btn_start.onclick = function startStop() {
   Interval = setInterval(timer, 10);
-
+  count++;
   timer_duration = document.querySelector("#timer-input").value;
   btn_info_innerHTML = "Click";
   append_seconds = timer_duration;
