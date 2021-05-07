@@ -4,13 +4,13 @@
   user-select: none;
   font-family: sans-serif;
   font-weight: bold;
-  color: #EEE;
+  color: #F0F6FC;
 }
 body {
   background: #161B22;
 }
 #main {
-  background: #010409;
+  background: #0D1117;
   position: absolute;
   top: 6%;
   bottom: 6%;
@@ -24,7 +24,8 @@ body {
   font-size: 4em;
 }
 .btn {
-  background: #AA0000;
+  background: #58A6FF;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
   position: relative;
   width: 50%;
   height: 50%;
@@ -62,7 +63,7 @@ body {
   font-size: .666em;
 }
 .aside {
-  background: #010409;
+  background: #0D1117;
   position: absolute;
   top: 6%;
   bottom: 6%;
@@ -81,6 +82,8 @@ body {
   font-size: 1.5em;
 }
 #timer-input {
+  background: #F0F6FC;
+  border: none;
   color: #000;
   width: 70%;
   height: 2em;
