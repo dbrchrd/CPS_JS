@@ -33,6 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  border-radius: 3px;
 }
 #btn-start {
   display: flex;
