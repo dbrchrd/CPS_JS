@@ -6,12 +6,24 @@
     <title>JS - CLicks Speed Count</title>
   </head>
   <body>
+
     <main id="main">
       <div id="timer-cont" class="timer-cont">
-        <span id="timer"><span id="sec"></span>:<span id="tens">00</span></span>
+        <span id="timer"><span id="sec">--</span>:<span id="tens">00</span></span>
       </div>
-      <div id="btn" class="btn">
-        <span id="btn-info">Start</span>
+      <div id="btn-start" class="btn">
+        <span>Start</span>
+      </div>
+      <div id="btn-click" class="btn">
+        <span class="btn-info">Click</span>
+      </div>
+      <div id="btn-fin" class="btn">
+        <img src="re.svg" id="retry" alt="retry-button">
+        <span id="btn-info" class="btn-info">
+          Clicks : <span id="fin-clicks-display"></span><br>
+          Time : <span id="fin-time-display"></span><br>
+          CPS : <span id="fin-cps-display"></span>
+        </span>
       </div>
     </main>
     <aside class="aside">
