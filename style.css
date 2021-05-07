@@ -74,7 +74,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-  font-size: 1.5em;
+  font-size: 1.3em;
   padding: 12px;
 }
 #timer-input{
@@ -82,9 +82,11 @@ body {
   font-size: 1.5em;
 }
 #timer-input {
+  user-select: all;
   background: #F0F6FC;
   border: none;
-  color: #000;
+  border-radius: 5px;
+  color: #0D1117;
   width: 70%;
   height: 2em;
 }
