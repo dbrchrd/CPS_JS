@@ -1,29 +1,42 @@
 console.log('main.js is running');
-const btn = document.querySelector("#btn");
+var tens;
+const btn_start = document.querySelector("#btn-start");
+const btn_click = document.querySelector("#btn-click");
+const btn_fin = document.querySelector("#btn-fin");
+const btn_retry = document.querySelector("#retry");
+
 var btn_info;
 var btn_info_innerHTML;
 var timer_duration;
-console.log(btn);
-console.log(btn_info);
 var append_seconds = timer_duration;
 var append_tens = 00;
+var count = 0;
 
-btn.onclick = function startStop() {
-  timer_duration = document.querySelector("#timer-input").value;
+btn_start.onclick = function startStop() {
   Interval = setInterval(timer, 10);
 
-
+  timer_duration = document.querySelector("#timer-input").value;
   btn_info_innerHTML = "Click";
   append_seconds = timer_duration;
   console.log("Timer duration : " + timer_duration + " seconds");
-  console.log(btn_info_innerHTML);
-
+  btn_start.style.display = "none";
+  btn_click.style.display = "flex";
+  btn_fin.style.display = "none";
   timer();
 }
-
+btn_click.onclick = function clicks() {
+  count++;
+  console.log(count);
+}
+btn_retry.onclick = function retry() {
+  btn_start.style.display = "flex";
+  btn_click.style.display = "none";
+  btn_fin.style.display = "none";
+}
 function timer() {
-  btn_info = document.querySelector("#btn-info");
-  btn_info_innerHTML = document.querySelector("#btn-info").innerHTML;
+
+  btn_info = document.querySelector(".btn-info");
+  btn_info_innerHTML = document.querySelector(".btn-info").innerHTML;
   append_tens = append_tens - 1;
 
   document.querySelector("#sec").innerHTML = append_seconds;
@@ -37,11 +50,23 @@ function timer() {
     append_tens = 99;
   }
   if (append_seconds < 0) {
+    clearInterval(Interval);
     append_seconds = 0;
     append_tens = 0;
-    clearInterval(Interval);
+
+    btn_start.style.display = "none";
+    btn_click.style.display = "none";
+    btn_fin.style.display = "flex";
+    document.querySelector("#fin-clicks-display").innerHTML = count;
+    document.querySelector("#fin-time-display").innerHTML = timer_duration + " s";
+    document.querySelector("#fin-cps-display").innerHTML = (count / timer_duration).toFixed(2);
+    count = 0;
+    tens = document.querySelector("#tens").innerText;
+    if (tens == "0-1") {
+      document.querySelector("#tens").innerText = "00";
+    }
   }
-  
+
   if (append_seconds <= .3 * timer_duration - 1) {
     btn_info.style.color = "orange";
     btn_info.style.transition = ".4s";
@@ -55,7 +80,3 @@ function timer() {
   }
 
 }
-
-// function affTimer() {
-//
-// }
