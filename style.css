@@ -9,6 +9,18 @@
 body {
   background: #161B22;
 }
+.title {
+  position: absolute;
+  z-index: 100;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  background: #0D1117;
+  border-radius: 15px;
+  border: double 10px #58A6FF;
+  text-align: center;
+}
 #main {
   background: #0D1117;
   position: absolute;
