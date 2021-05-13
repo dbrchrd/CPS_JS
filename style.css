@@ -11,12 +11,13 @@ body {
 }
 .title {
   position: absolute;
+  padding: 10px;
   z-index: 100;
   top: 2%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 30px;
-  background: #0D1117;
+  background: #161B22;
   border-radius: 15px;
   border: double 10px #58A6FF;
   text-align: center;
