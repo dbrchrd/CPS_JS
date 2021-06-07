@@ -68,15 +68,15 @@ function timer() {
   }
 
   if (append_seconds <= .3 * timer_duration - 1) {
-    btn_info.style.color = "orange";
+    btn_info.style.color = "#FF9B00";
     btn_info.style.transition = ".4s";
   }
   if (append_seconds <= .1 * timer_duration - 1) {
-    btn_info.style.color = "red";
+    btn_info.style.color = "#FF1919";
     btn_info.style.transition = ".4s";
   }
   if (append_seconds > .3 * timer_duration - 1) {
-    btn_info.style.color = "green";
+    btn_info.style.color = "#37FF37";
   }
 
 }
