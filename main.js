@@ -5,12 +5,7 @@ const btn_click = document.querySelector("#btn-click");
 const btn_fin = document.querySelector("#btn-fin");
 const btn_retry = document.querySelector("#retry");
 
-var btn_info;
-var btn_info_innerHTML;
-var timer_duration;
-var append_seconds = timer_duration;
-var append_tens = 00;
-var count = 0;
+var btn_info, btn_info_innerHTML, timer_duration, append_seconds = timer_duration, append_tens = 00, count = 0;
 
 btn_start.onclick = function startStop() {
   Interval = setInterval(timer, 10);
@@ -62,6 +57,7 @@ function timer() {
     } else {
       document.querySelector(".some-clicks").innerHTML = "s";
     }
+    document.querySelector("#timer").innerHTML = "Finished !";
     document.querySelector("#fin-clicks-display").innerHTML = count;
     document.querySelector("#fin-time-display").innerHTML = timer_duration + " s";
     document.querySelector("#fin-cps-display").innerHTML = (count / timer_duration).toFixed(2);
