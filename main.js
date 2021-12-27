@@ -57,6 +57,11 @@ function timer() {
     btn_start.style.display = "none";
     btn_click.style.display = "none";
     btn_fin.style.display = "flex";
+    if (count < 2) {
+      document.querySelector(".some-clicks").innerHTML = "";
+    } else {
+      document.querySelector(".some-clicks").innerHTML = "s";
+    }
     document.querySelector("#fin-clicks-display").innerHTML = count;
     document.querySelector("#fin-time-display").innerHTML = timer_duration + " s";
     document.querySelector("#fin-cps-display").innerHTML = (count / timer_duration).toFixed(2);
