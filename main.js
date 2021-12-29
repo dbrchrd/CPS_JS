@@ -1,11 +1,7 @@
 console.log('main.js is running');
-var tens;
-const btn_start = document.querySelector("#btn-start");
-const btn_click = document.querySelector("#btn-click");
-const btn_fin = document.querySelector("#btn-fin");
-const btn_retry = document.querySelector("#retry");
+const btn_start = document.querySelector("#btn-start"), btn_click = document.querySelector("#btn-click"), btn_fin = document.querySelector("#btn-fin"), btn_retry = document.querySelector("#retry");
 
-var btn_info, btn_info_innerHTML, timer_duration, append_seconds = timer_duration, append_tens = 00, count = 0;
+var btn_info, btn_info_innerHTML, timer_duration, append_seconds = timer_duration, append_tens = 00, count = 0, tens;
 
 btn_start.onclick = function startStop() {
   Interval = setInterval(timer, 10);
@@ -79,5 +75,4 @@ function timer() {
   if (append_seconds > .3 * timer_duration - 1) {
     btn_info.style.color = "#37FF37";
   }
-
 }
