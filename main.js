@@ -3,7 +3,7 @@ const btn_start = document.querySelector("#btn-start"), btn_click = document.que
 
 var btn_info, btn_info_innerHTML, timer_duration, append_seconds = timer_duration, append_tens = 00, count = 0, tens;
 
-btn_start.onclick = function startStop() {
+btn_start.onclick = () => {
   Interval = setInterval(timer, 10);
   count++;
   timer_duration = document.querySelector("#timer-input").value;
@@ -15,11 +15,11 @@ btn_start.onclick = function startStop() {
   btn_fin.style.display = "none";
   timer();
 }
-btn_click.onclick = function clicks() {
+btn_click.onclick = () => {
   count++;
   console.log(count);
 }
-btn_retry.onclick = function retry() {
+btn_retry.onclick = () => {
   btn_start.style.display = "flex";
   btn_click.style.display = "none";
   btn_fin.style.display = "none";
