@@ -24,7 +24,7 @@ btn_retry.onclick = () => {
   btn_click.style.display = "none";
   btn_fin.style.display = "none";
 }
-function timer() {
+const timer = () => {
 
   btn_info = document.querySelector(".btn-info");
   btn_info_innerHTML = document.querySelector(".btn-info").innerHTML;
