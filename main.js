@@ -2,6 +2,14 @@ console.log('main.js is running');
 const qs = (elPath) => {
   return document.querySelector(elPath);
 }
+const show = (bool, elPath) => {
+  if (bool === 0) {
+    elPath.style.display = "none";
+  } else if (bool === 1) {
+    elPath.style.display = "flex";
+  }
+  return elPath, bool;
+}
 const btn_start = qs("#btn-start"), btn_click = qs("#btn-click"), btn_fin = qs("#btn-fin"), btn_retry = qs("#retry");
 
 var btn_info, btn_info_innerHTML, timer_duration, append_seconds = timer_duration, append_tens = 00, count = 0, tens;
