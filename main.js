@@ -20,16 +20,12 @@ const start = () => {
   btn_info_innerHTML = "Click";
   append_seconds = timer_duration;
   console.log("Timer duration : " + timer_duration + " seconds");
-  btn_start.style.display = "none";
-  btn_click.style.display = "flex";
-  btn_fin.style.display = "none";
+  show(0, btn_start); show(1, btn_click); show(0, btn_fin);
   timer();
 }
 
 const retry = () => {
-  btn_start.style.display = "flex";
-  btn_click.style.display = "none";
-  btn_fin.style.display = "none";
+  show(1, btn_start); show(0, btn_click); show(0, btn_fin);
 }
 btn_start.onclick = () => {
   start();
@@ -62,9 +58,7 @@ const timer = () => {
     append_seconds = 0;
     append_tens = 0;
 
-    btn_start.style.display = "none";
-    btn_click.style.display = "none";
-    btn_fin.style.display = "flex";
+    show(0, btn_start); show(0, btn_click); show(1, btn_fin);
     if (count < 2) {
       qs(".some-clicks").innerHTML = "";
     } else {
