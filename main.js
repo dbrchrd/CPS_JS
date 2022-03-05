@@ -2,8 +2,7 @@ console.log('main.js is running');
 const btn_start = document.querySelector("#btn-start"), btn_click = document.querySelector("#btn-click"), btn_fin = document.querySelector("#btn-fin"), btn_retry = document.querySelector("#retry");
 
 var btn_info, btn_info_innerHTML, timer_duration, append_seconds = timer_duration, append_tens = 00, count = 0, tens;
-
-btn_start.onclick = () => {
+const start = () => {
   Interval = setInterval(timer, 10);
   count++;
   timer_duration = document.querySelector("#timer-input").value;
@@ -14,6 +13,10 @@ btn_start.onclick = () => {
   btn_click.style.display = "flex";
   btn_fin.style.display = "none";
   timer();
+}
+
+btn_start.onclick = () => {
+  start();
 }
 btn_click.onclick = () => {
   count++;
