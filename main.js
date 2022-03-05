@@ -15,6 +15,11 @@ const start = () => {
   timer();
 }
 
+const retry = () => {
+  btn_start.style.display = "flex";
+  btn_click.style.display = "none";
+  btn_fin.style.display = "none";
+}
 btn_start.onclick = () => {
   start();
 }
@@ -23,9 +28,7 @@ btn_click.onclick = () => {
   console.log(count);
 }
 btn_retry.onclick = () => {
-  btn_start.style.display = "flex";
-  btn_click.style.display = "none";
-  btn_fin.style.display = "none";
+  retry();
 }
 const timer = () => {
 
