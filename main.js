@@ -39,9 +39,7 @@ const timer = () => {
   qs("#sec").innerHTML = append_seconds;
   qs("#tens").innerHTML = append_tens;
 
-  if (append_tens < 10) {
-    qs("#tens").innerHTML = "0" + append_tens;
-  }
+  (append_tens < 10) ? qs("#tens").innerHTML = "0" + append_tens : null;
   if (append_tens < 1) {
     append_seconds = append_seconds - 1;
     append_tens = 99;
@@ -63,9 +61,7 @@ const timer = () => {
     qs("#fin-cps-display").innerHTML = (count / timer_duration).toFixed(2);
     count = 0;
     tens = qs("#tens").innerText;
-    if (tens == "0-1") {
-      qs("#tens").innerText = "00";
-    }
+    (tens == "0-1") ? qs("#tens").innerText = "00" : null;
   }
 
   if (append_seconds <= .3 * timer_duration - 1) {
