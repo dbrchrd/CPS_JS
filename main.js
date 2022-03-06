@@ -23,20 +23,16 @@ const start = () => {
   show(0, btn_start); show(1, btn_click); show(0, btn_fin);
   timer();
 }
-
 const retry = () => {
   show(1, btn_start); show(0, btn_click); show(0, btn_fin);
 }
-btn_start.onclick = () => {
-  start();
-}
+
+btn_start.onclick = () => start();
 btn_click.onclick = () => {
   count++;
   console.log(count);
 }
-btn_retry.onclick = () => {
-  retry();
-}
+btn_retry.onclick = () => retry();
 const timer = () => {
 
   btn_info = qs(".btn-info");
