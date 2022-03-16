@@ -19,4 +19,5 @@ window.onload = () => {
 qs(".aside > input").oninput = () => {
   qs(".aside > input").value = qs(".aside > input").value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
   qs("#secs").innerText = qs(".aside > input").value;
+  (qs(".aside > input").value === "") ? qs("#secs").innerText = 10 : null;
 }
