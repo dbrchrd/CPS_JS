@@ -9,6 +9,13 @@ const show = (bool, elPath) => {
 }
 const btn_start = qs("#btn-start"), btn_click = qs("#btn-click"), btn_fin = qs("#btn-fin"), btn_retry = qs("#retry");
 
+let btn_info,
+  btn_info_innerHTML,
+  timer_duration,
+  seconds,
+  tens = 00,
+  count = 0;
+
 /*************** Listeners ***************/
 qs(".aside > input").onclick = () => {
   qs(".aside > input").value = "";
